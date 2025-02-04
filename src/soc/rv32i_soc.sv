@@ -36,7 +36,7 @@ module rv32i_soc #(
     logic dmem_write, spi_write, spi_read;
     logic stall_pipl;
     logic [31:0] current_pc, inst;
-    logic sel_boot_rom;
+    logic sel_boot_rom, sel_boot_rom_ff;
     logic if_id_reg_en;
 
     // Processor core instance
@@ -325,7 +325,7 @@ module rv32i_soc #(
         .ack_o       (wb_s2m_imem_ack)
     );
 
-    assign imem_inst = wb_s2m_dmem_dat;
+    assign imem_inst = wb_s2m_imem_dat;
 
     // ============================================
     //            SRAM Memory Instances
@@ -487,13 +487,14 @@ module rv32i_soc #(
 
     // Inst selection mux
     assign sel_boot_rom = &current_pc[31:12]; // 0xfffff000 - to - 0xffffffff 
+    always @(posedge clk) sel_boot_rom_ff <= sel_boot_rom;
     mux2x1 #(
         .n(32)
     ) rom_imem_inst_sel_mux (
-        .in0    (imem_inst   ),
-        .in1    (rom_inst_ff ),
-        .sel    (sel_boot_rom),
-        .out    (inst        )
+        .in0    (imem_inst      ),
+        .in1    (rom_inst_ff    ),
+        .sel    (sel_boot_rom_ff),
+        .out    (inst           )
     );
 
 

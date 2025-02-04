@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Feb  4 12:24:50 2025
+| Date         : Tue Feb  4 14:24:25 2025
 | Host         : IT-RDIA-NSH running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_drc -file rv32i_soc_fpag_top_drc_routed.rpt -pb rv32i_soc_fpag_top_drc_routed.pb -rpx rv32i_soc_fpag_top_drc_routed.rpx
 | Design       : rv32i_soc_fpag_top
@@ -150,7 +150,7 @@ Related violations: <none>
 
 REQP-1840#20 Warning
 RAMB18 async control check  
-The RAMB18E1 soc_inst/data_mem_inst/dmem_reg has an input control pin soc_inst/data_mem_inst/dmem_reg/WEBWE[3] (net: soc_inst/data_mem_inst/WEBWE[3]) which is driven by a register (soc_inst/rv32i_core_inst/data_path_inst/exe_mem_reg/n_bit_reg_reg[8]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB18E1 soc_inst/data_mem_inst/dmem_reg has an input control pin soc_inst/data_mem_inst/dmem_reg/WEBWE[3] (net: soc_inst/data_mem_inst/WEBWE[3]) which is driven by a register (soc_inst/rv32i_core_inst/data_path_inst/exe_mem_reg/n_bit_reg_reg[7]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 

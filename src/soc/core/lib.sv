@@ -1,6 +1,4 @@
-typedef enum logic [3:0]  { ADD, SLL, SLT, SLTU, XOR, SRL, OR, AND, SUB = 4'b1000, SRA = 4'b1101} alu_t;
 
-typedef enum logic [1:0] {STORE_BYTE, STORE_HALFWORD, STORE_WORD} store_t;
 
 // Decoders here
 module n_bit_dec #(
@@ -184,72 +182,88 @@ module n_bit_reg_wclr #(
 endmodule : n_bit_reg_wclr
 
 
-typedef struct packed {
-    logic [31:0] current_pc;
-    logic [31:0] pc_plus_4;
-} if1_if2_reg_t;
 
+package riscv_types;
+    
+    // ALU operation types
+    typedef enum logic [3:0]  { 
+        ADD, SLL, SLT, SLTU, XOR, SRL, OR, AND, 
+        SUB = 4'b1000, SRA = 4'b1101 
+    } alu_t;
 
-typedef struct packed {
-    logic [31:0] current_pc;
-    logic [31:0] pc_plus_4;
-    logic [31:0] inst;
-} if_id_reg_t;
+    // Store operation types
+    typedef enum logic [1:0] { 
+        STORE_BYTE, STORE_HALFWORD, STORE_WORD 
+    } store_t;
 
+    // IF1/IF2 Register Structure
+    typedef struct packed {
+        logic [31:0] current_pc;
+        logic [31:0] pc_plus_4;
+    } if1_if2_reg_t;
 
-typedef struct packed {
-    // data signals 
-    logic [31:0] current_pc; // 32
-    logic [31:0] pc_plus_4;  // 32
-    logic [4:0]  rs1;        // 32
-    logic [4:0]  rs2;
-    logic [4:0]  rd; 
-    logic [2:0]  fun3;
-    logic        fun7_5;
-    logic [31:0] reg_rdata1;
-    logic [31:0] reg_rdata2;
-    logic [31:0] imm;
-    // control signals
-    logic        reg_write;
-    logic        mem_write;
-    logic        mem_to_reg;
-    logic        branch;
-    logic        alu_src;
-    logic        jump;
-    logic        lui;
-    logic        auipc;
-    logic        jal;
-    logic [1:0]  alu_op;
-} id_exe_reg_t;
+    // IF/ID Register Structure
+    typedef struct packed {
+        logic [31:0] current_pc;
+        logic [31:0] pc_plus_4;
+        logic [31:0] inst;
+    } if_id_reg_t;
 
+    // ID/EX Register Structure
+    typedef struct packed {
+        // Data signals 
+        logic [31:0] current_pc; 
+        logic [31:0] pc_plus_4;
+        logic [4:0]  rs1;
+        logic [4:0]  rs2;
+        logic [4:0]  rd; 
+        logic [2:0]  fun3;
+        logic        fun7_5;
+        logic [31:0] reg_rdata1;
+        logic [31:0] reg_rdata2;
+        logic [31:0] imm;
+        // Control signals
+        logic        reg_write;
+        logic        mem_write;
+        logic        mem_to_reg;
+        logic        branch;
+        logic        alu_src;
+        logic        jump;
+        logic        lui;
+        logic        auipc;
+        logic        jal;
+        logic [1:0]  alu_op;
+    } id_exe_reg_t;
 
-typedef struct packed {
-    // data signals 
-    logic [31:0] pc_plus_4;
-    logic [31:0] pc_jump;      
-    logic [4:0]  rs2;
-    logic [4:0]  rd; 
-    logic [2:0]  fun3;
-    logic [31:0] rdata2_frw;
-    logic [31:0] imm;
-    logic [31:0] alu_result;
-    // control signals
-    logic        reg_write;
-    logic        mem_write;
-    logic        mem_to_reg;
-    logic        branch;
-    logic        jump;
-    logic        lui;
-    logic        zero;
-} exe_mem_reg_t;
+    // EX/MEM Register Structure
+    typedef struct packed {
+        // Data signals 
+        logic [31:0] pc_plus_4;
+        logic [31:0] pc_jump;      
+        logic [4:0]  rs2;
+        logic [4:0]  rd; 
+        logic [2:0]  fun3;
+        logic [31:0] rdata2_frw;
+        logic [31:0] imm;
+        logic [31:0] alu_result;
+        // Control signals
+        logic        reg_write;
+        logic        mem_write;
+        logic        mem_to_reg;
+        logic        branch;
+        logic        jump;
+        logic        lui;
+        logic        zero;
+    } exe_mem_reg_t;
 
+    // MEM/WB Register Structure
+    typedef struct packed {
+        // Data signals 
+        logic [4:0]  rd; 
+        logic [31:0] result;
+        // Control signals
+        logic        reg_write;
+        logic        mem_to_reg;
+    } mem_wb_reg_t;
 
-typedef struct packed {
-    // data signals 
-    logic [4:0]  rd; 
-    logic [31:0] result;
-
-    // control signals
-    logic        reg_write;
-    logic        mem_to_reg;
-} mem_wb_reg_t;
+endpackage

@@ -25,17 +25,7 @@ assign wb_acc = cyc_i & stb_i;
 assign mem_write = wb_acc &  we_i;
 assign mem_read  = wb_acc & ~we_i;
 
-// outputs 
-// generate acknoledge one cycle after the reset
-n_bit_reg #(
-    .n(1)
-) wb_ac_ff (
-    .clk     (clk_i   ),
-    .reset_n (~rst_i  ),
-    .data_i  (wb_acc  ),
-    .data_o  (ack_o   ),
-    .wen     (1'b1    )
-);
+assign ack_o = wb_acc;
 
 
 logic [6:0] word_addr;

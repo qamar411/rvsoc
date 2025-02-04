@@ -30,10 +30,10 @@ module rv32i_soc_tb;
     end
 
 
-//    // initializing the instruction memory after every reset
-//    always @(posedge reset_n) begin
-//        $readmemh("/home/it/Documents/cx-204/labs/riscv/soc-with-single-cycle/tb/machine.hex", DUT.soc_inst.rv32i_core_inst.data_path_inst.imem_inst.imem);
-//    end // wait 
+   // initializing the instruction memory after every reset
+   initial begin
+       $readmemh("/home/it/Documents/rvsoc_v3/src/tb/uart_receiver/machine.hex", DUT.inst_mem_inst.dmem);
+   end // wait 
 
    initial begin 
     //    repeat(100000) @(posedge clk);

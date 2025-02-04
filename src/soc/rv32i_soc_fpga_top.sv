@@ -1,4 +1,3 @@
-// `include "core/lib.sv"
 
 module rv32i_soc_fpag_top (
     input logic CLK100MHZ, 

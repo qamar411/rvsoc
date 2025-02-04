@@ -17,7 +17,11 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-11960-IT-RDIA-NSH/incrSyn
+set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 5
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,7 +38,6 @@ read_verilog /home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_interco
 set_property file_type "Verilog Header" [get_files /home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh]
 read_verilog -library xil_defaultlib -sv {
   /home/it/Documents/rvsoc_v3/src/soc/core/lib.sv
-  /home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv
   /home/it/Documents/rvsoc_v3/src/soc/core/alu.sv
   /home/it/Documents/rvsoc_v3/src/soc/core/alu_control.sv
   /home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/bidirec.sv
@@ -54,9 +57,10 @@ read_verilog -library xil_defaultlib -sv {
   /home/it/Documents/rvsoc_v3/src/soc/rv32i_soc.sv
   /home/it/Documents/rvsoc_v3/src/soc/core/rv32i_top.sv
   /home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.sv
+  /home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv
   /home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wishbone_controller.sv
-  /home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv
   /home/it/Documents/rvsoc_v3/src/soc/core/inst_mem.sv
+  /home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv
 }
 read_verilog -library xil_defaultlib {
   /home/it/Documents/rvsoc_v3/src/soc/uncore/spi/fifo4.v

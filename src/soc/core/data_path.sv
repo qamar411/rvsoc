@@ -1,3 +1,5 @@
+import riscv_types::*;
+
 module data_path #(
     parameter DMEM_DEPTH = 1024, 
     parameter IMEM_DEPTH = 1024

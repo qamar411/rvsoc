@@ -1,4 +1,4 @@
-// typedef enum logic [1:0] {STORE_BYTE, STORE_HALFWORD, STORE_WORD} store_t;
+import riscv_types::*;
 module store_aligner (
     input logic [31:0] wdata,
     input store_t store_type,  // 2-bit enum type

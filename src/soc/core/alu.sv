@@ -1,13 +1,9 @@
-// typedef enum logic [3:0]  { ADD, SLL, SLT, SLTU, XOR, SRL, OR, AND, SUB = 4'b1000, SRA = 4'b1101} alu_t;
+import riscv_types::*;
 
 module alu (
     input alu_t alu_ctrl,
     input logic [31:0] op1,
     input logic [31:0] op2,
-    input logic lui, 
-    input logic jump,
-    input logic [31:0] imm, 
-    input logic [31:0] pc_plus_4,
     output logic [31:0] alu_result, 
     output logic zero
 );

@@ -28,10 +28,10 @@ always_comb begin
     wb_cyc_o = proc_write | proc_read;
     wb_stb_o = proc_write | proc_read;
     wb_we_o = proc_write;
-    // if(proc_write | proc_read) begin 
-    //     proc_stall_pipl = ~wb_ack_i;
-    // end else proc_stall_pipl = 0; // currently there is no stall from the memory side
-    proc_stall_pipl = 0;
+    if(proc_write | proc_read) begin 
+        proc_stall_pipl = ~wb_ack_i;
+    end else proc_stall_pipl = 0; // currently there is no stall from the memory side
+    // proc_stall_pipl = 0;
 end
 
 
