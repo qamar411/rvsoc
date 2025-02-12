@@ -20,6 +20,21 @@ module rv32i_soc_fpag_top (
     
     
     logic        o_flash_sclk;
+    STARTUPE2 STARTUPE2
+        (
+        .CFGCLK    (),
+        .CFGMCLK   (),
+        .EOS       (),
+        .PREQ      (),
+        .CLK       (1'b0),
+        .GSR       (1'b0),
+        .GTS       (1'b0),
+        .KEYCLEARB (1'b1),
+        .PACK      (1'b0),
+        .USRCCLKO  (o_flash_sclk),
+        .USRCCLKTS (1'b0),
+        .USRDONEO  (1'b1),
+        .USRDONETS (1'b0));
 
     // soc core instance 
 

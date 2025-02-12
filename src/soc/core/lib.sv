@@ -155,7 +155,8 @@ endmodule : n_bit_reg
 
 module n_bit_reg_wclr #(
     parameter n = 8,
-    parameter RESET_VALUE = 0
+    parameter RESET_VALUE = 0,
+    parameter CLR_VALUE = 0
 )(
     input logic clk, 
     input logic reset_n,
@@ -171,7 +172,7 @@ module n_bit_reg_wclr #(
         if(~reset_n)begin 
             n_bit_reg <= RESET_VALUE;
         end else if (clear) begin
-            n_bit_reg <= 0; 
+            n_bit_reg <= CLR_VALUE; 
         end else if (wen) begin 
             n_bit_reg <= data_i;
         end

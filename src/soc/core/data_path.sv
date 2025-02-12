@@ -132,7 +132,16 @@ module data_path #(
     //              IF1-IF2 Pipeline Register
     // ============================================
     
+    logic if_id_reg_en_ff;
     logic if_id_reg_clr_ff;
+    n_bit_reg #(
+        .n(1)
+    ) if_id_reg_en_ff_inst (
+        .*,
+        .data_i(if_id_reg_en),
+        .data_o(if_id_reg_en_ff),
+        .wen(1'b1)
+    );
     n_bit_reg #(
         .n(1)
     ) if_id_reg_clr_ff_inst (
@@ -141,7 +150,8 @@ module data_path #(
         .data_o(if_id_reg_clr_ff),
         .wen(1'b1)
     );
-    
+
+
     if1_if2_reg_t if1_if2_bus_i, if1_if2_bus_o;
 
     assign if1_if2_bus_i = {
@@ -163,6 +173,20 @@ module data_path #(
     assign current_pc_if2  = if1_if2_bus_o.current_pc;
     assign pc_plus_4_if2   = if1_if2_bus_o.pc_plus_4;
 
+    logic [31:0] inst_if_ff;
+
+    n_bit_reg_wclr #(
+        .n(32),
+        .CLR_VALUE(32'h00000013)
+    ) if2_reg (
+        .*,
+        .data_i(inst_if),
+        .data_o(inst_if_ff),
+        .wen(if_id_reg_en_ff),
+        .clear(if_id_reg_clr)
+    );
+    assign inst_if2 = if_id_reg_en_ff ? inst_if : inst_if_ff;
+
 
     // ============================================
     //              IF-ID Pipeline Register
@@ -173,7 +197,7 @@ module data_path #(
     assign if_id_bus_i = {
         current_pc_if2,
         pc_plus_4_if2,
-        inst_if
+        inst_if2
     };
 
     n_bit_reg_wclr #(

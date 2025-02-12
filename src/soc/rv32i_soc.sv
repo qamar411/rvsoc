@@ -1,6 +1,6 @@
 module rv32i_soc #(
-    parameter DMEM_DEPTH = 4096,
-    parameter IMEM_DEPTH = 4096
+    parameter DMEM_DEPTH = 128,
+    parameter IMEM_DEPTH = 128
 ) (
     input logic clk, 
     input logic reset_n,

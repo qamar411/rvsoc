@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Feb  4 14:23:22 2025
-# Process ID: 296029
+# Start of session at: Sat Feb  8 12:55:11 2025
+# Process ID: 28925
 # Current directory: /home/it/Documents/rvsoc_v3/vivado_proj/vivado_proj.runs/synth_1
 # Command line: vivado -log rv32i_soc_fpag_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rv32i_soc_fpag_top.tcl
 # Log file: /home/it/Documents/rvsoc_v3/vivado_proj/vivado_proj.runs/synth_1/rv32i_soc_fpag_top.vds
@@ -16,20 +16,25 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 296055 
+INFO: Helper process launched with PID 28966 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1777.672 ; gain = 155.688 ; free physical = 18464 ; free virtual = 32057
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1777.672 ; gain = 155.688 ; free physical = 17901 ; free virtual = 32023
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rv32i_soc_fpag_top' [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:2]
 	Parameter DMEM_DEPTH bound to: 128 - type: integer 
 	Parameter IMEM_DEPTH bound to: 128 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'clk_div_by_2' [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:62]
-INFO: [Synth 8-6155] done synthesizing module 'clk_div_by_2' (1#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:62]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'STARTUPE2' [/home/it/Xilinx/Vivado/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77870]
+	Parameter PROG_USR bound to: FALSE - type: string 
+	Parameter SIM_CCLK_FREQ bound to: 0.000000 - type: float 
+INFO: [Synth 8-6155] done synthesizing module 'STARTUPE2' (1#1) [/home/it/Xilinx/Vivado/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77870]
+INFO: [Synth 8-6157] synthesizing module 'clk_div_by_2' [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:77]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div_by_2' (2#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:77]
 INFO: [Synth 8-6157] synthesizing module 'rv32i_soc' [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc.sv:1]
 	Parameter DMEM_DEPTH bound to: 128 - type: integer 
 	Parameter IMEM_DEPTH bound to: 128 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'bidirec' [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/bidirec.sv:13]
-INFO: [Synth 8-6155] done synthesizing module 'bidirec' (2#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/bidirec.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'bidirec' (3#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/bidirec.sv:13]
 INFO: [Synth 8-6157] synthesizing module 'rv32i' [/home/it/Documents/rvsoc_v3/src/soc/core/rv32i_top.sv:1]
 	Parameter DMEM_DEPTH bound to: 128 - type: integer 
 	Parameter IMEM_DEPTH bound to: 128 - type: integer 
@@ -38,81 +43,91 @@ INFO: [Synth 8-6157] synthesizing module 'data_path' [/home/it/Documents/rvsoc_v
 	Parameter IMEM_DEPTH bound to: 128 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'program_counter' [/home/it/Documents/rvsoc_v3/src/soc/core/program_counter.sv:1]
 	Parameter MAX_LIMIT bound to: 800 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'program_counter' (3#1) [/home/it/Documents/rvsoc_v3/src/soc/core/program_counter.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (4#1) [/home/it/Documents/rvsoc_v3/src/soc/core/program_counter.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'mux2x1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2x1' (4#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'mux2x1' (5#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_reg' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
 	Parameter n bound to: 1 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg' (5#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg' (6#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 	Parameter n bound to: 64 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr' (6#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+	Parameter CLR_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr' (7#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+	Parameter n bound to: 32 - type: integer 
+	Parameter RESET_VALUE bound to: 0 - type: integer 
+	Parameter CLR_VALUE bound to: 19 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized0' (7#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 	Parameter n bound to: 96 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized0' (6#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+	Parameter CLR_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized1' (7#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 INFO: [Synth 8-6157] synthesizing module 'reg_file' [/home/it/Documents/rvsoc_v3/src/soc/core/reg_file.sv:1]
 	Parameter DEPTH bound to: 32 - type: integer 
 	Parameter WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'reg_file' (7#1) [/home/it/Documents/rvsoc_v3/src/soc/core/reg_file.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (8#1) [/home/it/Documents/rvsoc_v3/src/soc/core/reg_file.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'imm_gen' [/home/it/Documents/rvsoc_v3/src/soc/core/imm_gen.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux2x1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 	Parameter n bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1' (8#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1' (9#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux2x1__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 	Parameter n bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1__parameterized0' (8#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1__parameterized0' (9#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 INFO: [Synth 8-6157] synthesizing module 'mux2x1__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 	Parameter n bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized0' (8#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized0' (9#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 INFO: [Synth 8-6157] synthesizing module 'mux2x1__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 	Parameter n bound to: 11 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized1' (8#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized1' (9#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux3x1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
 	Parameter n bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1' (9#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
-INFO: [Synth 8-6155] done synthesizing module 'imm_gen' (10#1) [/home/it/Documents/rvsoc_v3/src/soc/core/imm_gen.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1' (10#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
+INFO: [Synth 8-6155] done synthesizing module 'imm_gen' (11#1) [/home/it/Documents/rvsoc_v3/src/soc/core/imm_gen.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized2' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 	Parameter n bound to: 190 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized1' (10#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+	Parameter CLR_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized2' (11#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 INFO: [Synth 8-6157] synthesizing module 'mux3x1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:62]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux3x1' (11#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:62]
+INFO: [Synth 8-6155] done synthesizing module 'mux3x1' (12#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:62]
 INFO: [Synth 8-6157] synthesizing module 'alu' [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_add_sub' [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:42]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_add_sub' (12#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:42]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (13#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:3]
-INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized2' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_add_sub' (13#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:42]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (14#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized3' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 	Parameter n bound to: 180 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized2' (13#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+	Parameter CLR_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized3' (14#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux3x1__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1__parameterized0' (13#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
-INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized3' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1__parameterized0' (14#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
+INFO: [Synth 8-6157] synthesizing module 'n_bit_reg_wclr__parameterized4' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
 	Parameter n bound to: 39 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized3' (13#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
-INFO: [Synth 8-6155] done synthesizing module 'data_path' (14#1) [/home/it/Documents/rvsoc_v3/src/soc/core/data_path.sv:3]
+	Parameter CLR_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg_wclr__parameterized4' (14#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:156]
+INFO: [Synth 8-6155] done synthesizing module 'data_path' (15#1) [/home/it/Documents/rvsoc_v3/src/soc/core/data_path.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'control_unit' [/home/it/Documents/rvsoc_v3/src/soc/core/control_unit.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'decode_control' [/home/it/Documents/rvsoc_v3/src/soc/core/main_control.sv:13]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_dec_with_en' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:14]
 	Parameter n bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec_with_en' (15#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:14]
-INFO: [Synth 8-6155] done synthesizing module 'decode_control' (16#1) [/home/it/Documents/rvsoc_v3/src/soc/core/main_control.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec_with_en' (16#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:14]
+INFO: [Synth 8-6155] done synthesizing module 'decode_control' (17#1) [/home/it/Documents/rvsoc_v3/src/soc/core/main_control.sv:13]
 INFO: [Synth 8-6157] synthesizing module 'alu_control' [/home/it/Documents/rvsoc_v3/src/soc/core/alu_control.sv:2]
 	Parameter LOAD_STORE bound to: 2'b00 
 	Parameter R_TYPE bound to: 2'b11 
 	Parameter I_TYPE bound to: 2'b01 
 	Parameter B_TYPE bound to: 2'b10 
-INFO: [Synth 8-6155] done synthesizing module 'alu_control' (17#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu_control.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'alu_control' (18#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alu_control.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'branch_controller' [/home/it/Documents/rvsoc_v3/src/soc/core/branch_controller.sv:10]
-INFO: [Synth 8-6155] done synthesizing module 'branch_controller' (18#1) [/home/it/Documents/rvsoc_v3/src/soc/core/branch_controller.sv:10]
+INFO: [Synth 8-6155] done synthesizing module 'branch_controller' (19#1) [/home/it/Documents/rvsoc_v3/src/soc/core/branch_controller.sv:10]
 INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:1]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:20]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:21]
@@ -121,49 +136,49 @@ WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logica
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:25]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:26]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:28]
-INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (19#1) [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (20#1) [/home/it/Documents/rvsoc_v3/src/soc/core/forwarding_unit.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'hazard_handler' [/home/it/Documents/rvsoc_v3/src/soc/core/hazard_controller.sv:1]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/hazard_controller.sv:16]
 WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/it/Documents/rvsoc_v3/src/soc/core/hazard_controller.sv:16]
-INFO: [Synth 8-6155] done synthesizing module 'hazard_handler' (20#1) [/home/it/Documents/rvsoc_v3/src/soc/core/hazard_controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_handler' (21#1) [/home/it/Documents/rvsoc_v3/src/soc/core/hazard_controller.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'pipeline_controller' [/home/it/Documents/rvsoc_v3/src/soc/core/pipeline_controller.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'pipeline_controller' (21#1) [/home/it/Documents/rvsoc_v3/src/soc/core/pipeline_controller.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'control_unit' (22#1) [/home/it/Documents/rvsoc_v3/src/soc/core/control_unit.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'rv32i' (23#1) [/home/it/Documents/rvsoc_v3/src/soc/core/rv32i_top.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'pipeline_controller' (22#1) [/home/it/Documents/rvsoc_v3/src/soc/core/pipeline_controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (23#1) [/home/it/Documents/rvsoc_v3/src/soc/core/control_unit.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'rv32i' (24#1) [/home/it/Documents/rvsoc_v3/src/soc/core/rv32i_top.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'wishbone_controller' [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wishbone_controller.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'store_aligner' [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_dec' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
 	Parameter n bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec' (24#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux2x1__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 	Parameter n bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1__parameterized1' (24#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux2x1__parameterized1' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:103]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_dec__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
 	Parameter n bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec__parameterized0' (24#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_dec__parameterized0' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:4]
 INFO: [Synth 8-6157] synthesizing module 'one_hot_mux3x1__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
 	Parameter n bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1__parameterized1' (24#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
-INFO: [Synth 8-6155] done synthesizing module 'store_aligner' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'one_hot_mux3x1__parameterized1' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:117]
+INFO: [Synth 8-6155] done synthesizing module 'store_aligner' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'n_bit_reg__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
 	Parameter n bound to: 5 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg__parameterized0' (25#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg__parameterized0' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
 INFO: [Synth 8-6157] synthesizing module 'load_aligner' [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:88]
 INFO: [Synth 8-6157] synthesizing module 'mux4x1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
 	Parameter n bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux4x1' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'mux4x1' (27#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
 INFO: [Synth 8-6157] synthesizing module 'mux2x1__parameterized2' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 	Parameter n bound to: 24 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized2' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized2' (27#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 INFO: [Synth 8-6157] synthesizing module 'mux2x1__parameterized3' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 	Parameter n bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized3' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
+INFO: [Synth 8-6155] done synthesizing module 'mux2x1__parameterized3' (27#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:45]
 INFO: [Synth 8-6157] synthesizing module 'mux4x1__parameterized0' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
 	Parameter n bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mux4x1__parameterized0' (26#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'load_aligner' (27#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:88]
-INFO: [Synth 8-6155] done synthesizing module 'wishbone_controller' (28#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wishbone_controller.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'mux4x1__parameterized0' (27#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'load_aligner' (28#1) [/home/it/Documents/rvsoc_v3/src/soc/core/alignment_units.sv:88]
+INFO: [Synth 8-6155] done synthesizing module 'wishbone_controller' (29#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wishbone_controller.sv:2]
 INFO: [Synth 8-6157] synthesizing module 'wb_intercon' [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'wb_mux' [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45]
 	Parameter dw bound to: 32 - type: integer 
@@ -172,25 +187,25 @@ INFO: [Synth 8-6157] synthesizing module 'wb_mux' [/home/it/Documents/rvsoc_v3/s
 	Parameter MATCH_ADDR bound to: 160'b0010000000000000000000100000000000000000000000000000000000000000000100000000000000000000000000000010000000000000000000010000000000100000000000000000000000000000 
 	Parameter MATCH_MASK bound to: 160'b1111111111111111111111110000000011110000000000000000000000000000111100000000000000000000000000001111111111111111111111110000000011111111111111111111111100000000 
 	Parameter slave_sel_bits bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'wb_mux' (29#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45]
-INFO: [Synth 8-6155] done synthesizing module 'wb_intercon' (30#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'wb_mux' (30#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'wb_intercon' (31#1) [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'simple_spi' [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:69]
 	Parameter SS_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:147]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:147]
 INFO: [Synth 8-6157] synthesizing module 'fifo4' [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/fifo4.v:54]
 	Parameter dw bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'fifo4' (31#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/fifo4.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'fifo4' (32#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/fifo4.v:54]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:244]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:244]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:279]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:279]
-INFO: [Synth 8-6155] done synthesizing module 'simple_spi' (32#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'simple_spi' (33#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/spi/simple_spi_top.v:69]
 INFO: [Synth 8-6157] synthesizing module 'uart_top' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_top.v:137]
 	Parameter SIM bound to: 0 - type: integer 
 	Parameter debug bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'uart_wb' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_wb.v:139]
-INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (33#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_wb.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (34#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_wb.v:139]
 INFO: [Synth 8-6157] synthesizing module 'uart_regs' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_regs.v:227]
 	Parameter SIM bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_transmitter.v:150]
@@ -210,13 +225,13 @@ INFO: [Synth 8-6157] synthesizing module 'raminfr' [/home/it/Documents/rvsoc_v3/
 	Parameter addr_width bound to: 4 - type: integer 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter depth bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'raminfr' (34#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/raminfr.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (35#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_tfifo.v:140]
-INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (36#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_transmitter.v:150]
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (35#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/raminfr.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (36#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_tfifo.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (37#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_transmitter.v:150]
 INFO: [Synth 8-6157] synthesizing module 'uart_sync_flops' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_sync_flops.v:67]
 	Parameter width bound to: 1 - type: integer 
 	Parameter init_value bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (37#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_sync_flops.v:67]
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (38#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_sync_flops.v:67]
 INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_receiver.v:196]
 	Parameter sr_idle bound to: 4'b0000 
 	Parameter sr_rec_start bound to: 4'b0001 
@@ -234,34 +249,34 @@ INFO: [Synth 8-6157] synthesizing module 'uart_rfifo' [/home/it/Documents/rvsoc_
 	Parameter fifo_depth bound to: 16 - type: integer 
 	Parameter fifo_pointer_w bound to: 4 - type: integer 
 	Parameter fifo_counter_w bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (38#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_rfifo.v:146]
-INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (39#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_receiver.v:196]
-INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (40#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_regs.v:227]
-INFO: [Synth 8-6155] done synthesizing module 'uart_top' (41#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_top.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (39#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_rfifo.v:146]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (40#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_receiver.v:196]
+INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (41#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_regs.v:227]
+INFO: [Synth 8-6155] done synthesizing module 'uart_top' (42#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/uart/uart_top.v:137]
 INFO: [Synth 8-6157] synthesizing module 'gpio_top' [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/gpio_top.sv:115]
 	Parameter dw bound to: 32 - type: integer 
 	Parameter aw bound to: 8 - type: integer 
 	Parameter gw bound to: 32 - type: integer 
 WARNING: [Synth 8-3848] Net wb_err_o in module/entity gpio_top does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/gpio_top.sv:142]
 WARNING: [Synth 8-3848] Net wb_inta_o in module/entity gpio_top does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/gpio_top.sv:143]
-INFO: [Synth 8-6155] done synthesizing module 'gpio_top' (42#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/gpio_top.sv:115]
+INFO: [Synth 8-6155] done synthesizing module 'gpio_top' (43#1) [/home/it/Documents/rvsoc_v3/src/soc/uncore/gpio/gpio_top.sv:115]
 INFO: [Synth 8-6157] synthesizing module 'data_mem' [/home/it/Documents/rvsoc_v3/src/soc/core/data_mem.sv:3]
 	Parameter DEPTH bound to: 128 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'n_bit_reg__parameterized1' [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
 	Parameter n bound to: 32 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg__parameterized1' (42#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
-INFO: [Synth 8-6155] done synthesizing module 'data_mem' (43#1) [/home/it/Documents/rvsoc_v3/src/soc/core/data_mem.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'n_bit_reg__parameterized1' (43#1) [/home/it/Documents/rvsoc_v3/src/soc/core/lib.sv:131]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (44#1) [/home/it/Documents/rvsoc_v3/src/soc/core/data_mem.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'rom' [/home/it/Documents/rvsoc_v3/src/soc/core/rom.sv:1]
-INFO: [Synth 8-6155] done synthesizing module 'rom' (44#1) [/home/it/Documents/rvsoc_v3/src/soc/core/rom.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'rom' (45#1) [/home/it/Documents/rvsoc_v3/src/soc/core/rom.sv:1]
 WARNING: [Synth 8-3848] Net wb_s2m_dmem_err in module/entity rv32i_soc does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh:116]
 WARNING: [Synth 8-3848] Net wb_s2m_dmem_rty in module/entity rv32i_soc does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh:117]
 WARNING: [Synth 8-3848] Net wb_s2m_imem_err in module/entity rv32i_soc does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh:100]
 WARNING: [Synth 8-3848] Net wb_s2m_imem_rty in module/entity rv32i_soc does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh:101]
 WARNING: [Synth 8-3848] Net wb_s2m_gpio_rty in module/entity rv32i_soc does not have driver. [/home/it/Documents/rvsoc_v3/src/soc/WishboneInterconnect/wb_intercon.svh:86]
-INFO: [Synth 8-6155] done synthesizing module 'rv32i_soc' (45#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc.sv:1]
-WARNING: [Synth 8-6104] Input port 'SW' has an internal driver [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:57]
-INFO: [Synth 8-6155] done synthesizing module 'rv32i_soc_fpag_top' (46#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'rv32i_soc' (46#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc.sv:1]
+WARNING: [Synth 8-6104] Input port 'SW' has an internal driver [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:72]
+INFO: [Synth 8-6155] done synthesizing module 'rv32i_soc_fpag_top' (47#1) [/home/it/Documents/rvsoc_v3/src/soc/rv32i_soc_fpga_top.sv:2]
 WARNING: [Synth 8-3331] design data_mem has unconnected port adr_i[31]
 WARNING: [Synth 8-3331] design data_mem has unconnected port adr_i[30]
 WARNING: [Synth 8-3331] design data_mem has unconnected port adr_i[29]
@@ -347,7 +362,7 @@ WARNING: [Synth 8-3331] design imm_gen has unconnected port inst[2]
 WARNING: [Synth 8-3331] design imm_gen has unconnected port inst[1]
 WARNING: [Synth 8-3331] design imm_gen has unconnected port inst[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1834.391 ; gain = 212.406 ; free physical = 18482 ; free virtual = 32063
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1834.391 ; gain = 212.406 ; free physical = 17812 ; free virtual = 31936
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -360,11 +375,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.234 ; gain = 227.250 ; free physical = 18489 ; free virtual = 32069
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.234 ; gain = 227.250 ; free physical = 17811 ; free virtual = 31935
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.234 ; gain = 227.250 ; free physical = 18489 ; free virtual = 32069
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1849.234 ; gain = 227.250 ; free physical = 17811 ; free virtual = 31935
 ---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -375,26 +392,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/rv32i_soc_fpag_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2038.859 ; gain = 0.000 ; free physical = 18440 ; free virtual = 32017
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2033.859 ; gain = 0.000 ; free physical = 17765 ; free virtual = 31905
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2038.859 ; gain = 0.000 ; free physical = 18440 ; free virtual = 32017
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2033.859 ; gain = 0.000 ; free physical = 17765 ; free virtual = 31905
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18451 ; free virtual = 32016
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17762 ; free virtual = 31902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18451 ; free virtual = 32016
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17762 ; free virtual = 31902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18451 ; free virtual = 32016
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17762 ; free virtual = 31902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'simple_spi'
 INFO: [Synth 8-802] inferred FSM for state register 'wbstate_reg' in module 'uart_wb'
@@ -453,7 +470,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'sequential' in module 'uart_receiver'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18466 ; free virtual = 32032
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17719 ; free virtual = 31860
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -489,7 +506,7 @@ Detailed RTL Component Info :
 	               96 Bit    Registers := 1     
 	               64 Bit    Registers := 1     
 	               39 Bit    Registers := 1     
-	               32 Bit    Registers := 38    
+	               32 Bit    Registers := 39    
 	               11 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                8 Bit    Registers := 14    
@@ -498,7 +515,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 8     
 	                3 Bit    Registers := 21    
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 68    
+	                1 Bit    Registers := 69    
 +---RAMs : 
 	               4K Bit         RAMs := 2     
 +---Muxes : 
@@ -507,7 +524,7 @@ Detailed RTL Component Info :
 	   2 Input     96 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 1     
 	   2 Input     39 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 27    
+	   2 Input     32 Bit        Muxes := 29    
 	   9 Input     32 Bit        Muxes := 1     
 	  11 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 1     
@@ -542,7 +559,7 @@ Detailed RTL Component Info :
 	   2 Input      2 Bit        Muxes := 8     
 	   3 Input      2 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 133   
+	   2 Input      1 Bit        Muxes := 134   
 	   7 Input      1 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 6     
 	   4 Input      1 Bit        Muxes := 28    
@@ -581,6 +598,13 @@ Detailed RTL Component Info :
 Module n_bit_reg_wclr__parameterized0 
 Detailed RTL Component Info : 
 +---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module n_bit_reg_wclr__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
 	               96 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     96 Bit        Muxes := 1     
@@ -599,7 +623,7 @@ Module mux2x1__parameterized1
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     11 Bit        Muxes := 1     
-Module n_bit_reg_wclr__parameterized1 
+Module n_bit_reg_wclr__parameterized2 
 Detailed RTL Component Info : 
 +---Registers : 
 	              190 Bit    Registers := 1     
@@ -620,14 +644,14 @@ Detailed RTL Component Info :
 	   9 Input     32 Bit        Muxes := 1     
 	  11 Input     32 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
-Module n_bit_reg_wclr__parameterized2 
+Module n_bit_reg_wclr__parameterized3 
 Detailed RTL Component Info : 
 +---Registers : 
 	              180 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input    180 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-Module n_bit_reg_wclr__parameterized3 
+Module n_bit_reg_wclr__parameterized4 
 Detailed RTL Component Info : 
 +---Registers : 
 	               39 Bit    Registers := 1     
@@ -638,6 +662,8 @@ Module data_path
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
 Module alu_control 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -890,7 +916,7 @@ INFO: [Synth 8-3333] propagating constant 1 across sequential element (soc_inst/
 INFO: [Synth 8-3886] merging instance 'soc_inst/rv32i_core_inst/data_path_inst/if_id_reg/n_bit_reg_reg[32]' (FDCE) to 'soc_inst/rv32i_core_inst/data_path_inst/if_id_reg/n_bit_reg_reg[64]'
 INFO: [Synth 8-3886] merging instance 'soc_inst/rv32i_core_inst/data_path_inst/id_exe_reg/n_bit_reg_reg[126]' (FDCE) to 'soc_inst/rv32i_core_inst/data_path_inst/id_exe_reg/n_bit_reg_reg[158]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18435 ; free virtual = 32007
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17748 ; free virtual = 31897
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -932,13 +958,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18386 ; free virtual = 31958
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17620 ; free virtual = 31786
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2038.859 ; gain = 416.875 ; free physical = 18379 ; free virtual = 31951
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2033.859 ; gain = 411.875 ; free physical = 17640 ; free virtual = 31806
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1010,7 +1036,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\soc_inst
 INFO: [Synth 8-6837] The timing for the instance soc_inst/data_mem_inst/dmem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance soc_inst/inst_mem_inst/dmem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2046.859 ; gain = 424.875 ; free physical = 18298 ; free virtual = 31870
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2044.859 ; gain = 422.875 ; free physical = 17584 ; free virtual = 31751
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1034,7 +1060,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17593 ; free virtual = 31757
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1047,7 +1073,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17593 ; free virtual = 31757
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1059,25 +1085,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17593 ; free virtual = 31757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17593 ; free virtual = 31757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17593 ; free virtual = 31757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17598 ; free virtual = 31762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1090,101 +1116,105 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     2|
-|2     |CARRY4   |    35|
-|3     |LUT1     |     9|
-|4     |LUT2     |   473|
-|5     |LUT3     |   251|
-|6     |LUT4     |   311|
-|7     |LUT5     |   431|
-|8     |LUT6     |  1362|
-|9     |MUXF7    |   288|
-|10    |MUXF8    |   128|
-|11    |RAM32M   |     8|
-|12    |RAMB18E1 |     2|
-|13    |FDCE     |  1957|
-|14    |FDPE     |    49|
-|15    |FDRE     |    62|
-|16    |IBUF     |    20|
-|17    |OBUF     |    19|
-+------+---------+------+
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |    35|
+|3     |LUT1      |     9|
+|4     |LUT2      |   475|
+|5     |LUT3      |   252|
+|6     |LUT4      |   343|
+|7     |LUT5      |   505|
+|8     |LUT6      |  1322|
+|9     |MUXF7     |   288|
+|10    |MUXF8     |   128|
+|11    |RAM32M    |     8|
+|12    |RAMB18E1  |     2|
+|13    |STARTUPE2 |     1|
+|14    |FDCE      |  1990|
+|15    |FDPE      |    49|
+|16    |FDRE      |    63|
+|17    |IBUF      |    20|
+|18    |OBUF      |    19|
++------+----------+------+
 
 Report Instance Areas: 
 +------+---------------------------------+-------------------------------+------+
 |      |Instance                         |Module                         |Cells |
 +------+---------------------------------+-------------------------------+------+
-|1     |top                              |                               |  5407|
+|1     |top                              |                               |  5511|
 |2     |  gen_core_clk                   |clk_div_by_2                   |     2|
-|3     |  soc_inst                       |rv32i_soc                      |  5362|
+|3     |  soc_inst                       |rv32i_soc                      |  5465|
 |4     |    data_mem_inst                |data_mem                       |    33|
 |5     |    gpio_module                  |gpio_top                       |    88|
-|6     |    inst_mem_inst                |data_mem_0                     |     1|
-|7     |    rom_inst_reg                 |n_bit_reg__parameterized1      |    30|
-|8     |    rom_instance                 |rom                            |    82|
-|9     |    rv32i_core_inst              |rv32i                          |  4180|
-|10    |      controller_inst            |control_unit                   |     3|
-|11    |        alu_controller_inst      |alu_control                    |     3|
-|12    |      data_path_inst             |data_path                      |  4177|
-|13    |        alu_inst                 |alu                            |    14|
-|14    |          add_sub_unit           |n_bit_add_sub                  |     8|
-|15    |        PC_inst                  |program_counter                |    82|
-|16    |        alu_op1_mux              |mux2x1                         |    32|
-|17    |        alu_op2_mux              |mux2x1_3                       |    28|
-|18    |        exe_mem_reg              |n_bit_reg_wclr__parameterized2 |   508|
-|19    |        id_exe_reg               |n_bit_reg_wclr__parameterized1 |   853|
-|20    |        if1_if2_reg              |n_bit_reg_wclr                 |   126|
-|21    |        if_id_reg                |n_bit_reg_wclr__parameterized0 |   244|
-|22    |        if_id_reg_clr_ff_inst    |n_bit_reg                      |    45|
-|23    |        jalr_pc_mux              |mux2x1_4                       |    31|
-|24    |        mem_stage_result_sel_mux |one_hot_mux3x1__parameterized0 |    32|
-|25    |        mem_wb_reg               |n_bit_reg_wclr__parameterized3 |   116|
-|26    |        next_pc_mux              |mux2x1_5                       |    32|
-|27    |        reg_file_inst            |reg_file                       |  1953|
-|28    |        write_back_mux           |mux2x1_6                       |    32|
-|29    |    spi                          |simple_spi                     |   135|
-|30    |      rfifo                      |fifo4                          |    23|
-|31    |      wfifo                      |fifo4_2                        |    26|
-|32    |    uart16550_0                  |uart_top                       |   722|
-|33    |      regs                       |uart_regs                      |   669|
-|34    |        i_uart_sync_flops        |uart_sync_flops                |     3|
-|35    |        receiver                 |uart_receiver                  |   388|
-|36    |          fifo_rx                |uart_rfifo                     |   248|
-|37    |            rfifo                |raminfr_1                      |    22|
-|38    |        transmitter              |uart_transmitter               |    98|
-|39    |          fifo_tx                |uart_tfifo                     |    50|
-|40    |            tfifo                |raminfr                        |    12|
-|41    |      wb_interface               |uart_wb                        |    53|
-|42    |    wb_intercon0                 |wb_intercon                    |    55|
-|43    |      wb_mux_io                  |wb_mux                         |    55|
-|44    |    wishbone_master              |wishbone_controller            |    35|
-|45    |      wishbone_cont_reg          |n_bit_reg__parameterized0      |    35|
+|6     |    inst_mem_inst                |data_mem_0                     |    33|
+|7     |    rom_imem_inst_sel_mux        |mux2x1                         |    31|
+|8     |    rom_inst_reg                 |n_bit_reg__parameterized1      |    30|
+|9     |    rom_instance                 |rom                            |    82|
+|10    |    rv32i_core_inst              |rv32i                          |  4215|
+|11    |      controller_inst            |control_unit                   |     3|
+|12    |        alu_controller_inst      |alu_control                    |     3|
+|13    |      data_path_inst             |data_path                      |  4212|
+|14    |        if_id_reg_clr_ff_inst    |n_bit_reg                      |     1|
+|15    |        if_id_reg_en_ff_inst     |n_bit_reg_5                    |     1|
+|16    |        alu_inst                 |alu                            |    14|
+|17    |          add_sub_unit           |n_bit_add_sub                  |     8|
+|18    |        PC_inst                  |program_counter                |    82|
+|19    |        alu_op1_mux              |mux2x1_3                       |    32|
+|20    |        alu_op2_mux              |mux2x1_4                       |    28|
+|21    |        exe_mem_reg              |n_bit_reg_wclr__parameterized3 |   510|
+|22    |        id_exe_reg               |n_bit_reg_wclr__parameterized2 |   853|
+|23    |        if1_if2_reg              |n_bit_reg_wclr                 |   126|
+|24    |        if2_reg                  |n_bit_reg_wclr__parameterized0 |    76|
+|25    |        if_id_reg                |n_bit_reg_wclr__parameterized1 |   244|
+|26    |        jalr_pc_mux              |mux2x1_6                       |    31|
+|27    |        mem_stage_result_sel_mux |one_hot_mux3x1__parameterized0 |    32|
+|28    |        mem_wb_reg               |n_bit_reg_wclr__parameterized4 |   116|
+|29    |        next_pc_mux              |mux2x1_7                       |    32|
+|30    |        reg_file_inst            |reg_file                       |  1953|
+|31    |        write_back_mux           |mux2x1_8                       |    32|
+|32    |    spi                          |simple_spi                     |   140|
+|33    |      rfifo                      |fifo4                          |    23|
+|34    |      wfifo                      |fifo4_2                        |    28|
+|35    |    uart16550_0                  |uart_top                       |   722|
+|36    |      regs                       |uart_regs                      |   669|
+|37    |        i_uart_sync_flops        |uart_sync_flops                |     3|
+|38    |        receiver                 |uart_receiver                  |   388|
+|39    |          fifo_rx                |uart_rfifo                     |   248|
+|40    |            rfifo                |raminfr_1                      |    22|
+|41    |        transmitter              |uart_transmitter               |    98|
+|42    |          fifo_tx                |uart_tfifo                     |    50|
+|43    |            tfifo                |raminfr                        |    12|
+|44    |      wb_interface               |uart_wb                        |    53|
+|45    |    wb_intercon0                 |wb_intercon                    |    55|
+|46    |      wb_mux_io                  |wb_mux                         |    55|
+|47    |    wishbone_master              |wishbone_controller            |    35|
+|48    |      wishbone_cont_reg          |n_bit_reg__parameterized0      |    35|
 +------+---------------------------------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.828 ; gain = 427.844 ; free physical = 18300 ; free virtual = 31872
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.828 ; gain = 425.844 ; free physical = 17598 ; free virtual = 31762
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 50 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2049.828 ; gain = 238.219 ; free physical = 18327 ; free virtual = 31898
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2049.836 ; gain = 427.844 ; free physical = 18327 ; free virtual = 31898
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2047.828 ; gain = 241.219 ; free physical = 17653 ; free virtual = 31817
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2047.836 ; gain = 425.844 ; free physical = 17653 ; free virtual = 31817
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 461 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 462 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2081.844 ; gain = 0.000 ; free physical = 18289 ; free virtual = 31860
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2079.844 ; gain = 0.000 ; free physical = 17634 ; free virtual = 31788
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-206 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+212 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2081.844 ; gain = 699.773 ; free physical = 18336 ; free virtual = 31908
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2081.844 ; gain = 0.000 ; free physical = 18336 ; free virtual = 31908
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2079.844 ; gain = 697.773 ; free physical = 17664 ; free virtual = 31819
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2079.844 ; gain = 0.000 ; free physical = 17664 ; free virtual = 31819
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/it/Documents/rvsoc_v3/vivado_proj/vivado_proj.runs/synth_1/rv32i_soc_fpag_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file rv32i_soc_fpag_top_utilization_synth.rpt -pb rv32i_soc_fpag_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb  4 14:23:47 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  8 12:55:39 2025...
